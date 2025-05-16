@@ -1,172 +1,191 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Mi Portfolio</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="preload" href="css/normalize.css" as="style">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-        <link rel="preload" href="css/style.css" as="style">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <header class="encabezado">
-           <div><a href="index.html"><img src="/imagen/LMDEVS (1).png" alt="" class="logo"></a></div> 
-           <div class="redes-sociales">
-            <a href="www.linkedin.com/in/luciano-michellon-mbarete" target="_blank" aria-label="LinkedIn">
-                <svg  xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" /></svg>
-            </a>
-            <a href="https://instagram.com/tu-usuario" aria-label="Instagram" target="_blank">
-                <svg  xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg>
-            </a>
-            <a href="https://wa.me/1162661506" target="_blank" aria-label="WhatsApp">
-                <svg  xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg>
-            </a>
-            <a href="/imagen/" target="_blank" aria-label="Curriculum-Vitae">
-                <svg  xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-cv"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M11 12.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0" /><path d="M13 11l1.5 6l1.5 -6" /></svg>
-            </a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevWeb | Diseño y Desarrollo Web Profesional</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">DEV<span>W</span>EB</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#portfolio">Portafolio</a></li>
+                <li><a href="#about">Sobre Mí</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+            <div class="burger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Diseño y Desarrollo Web a Medida</h1>
+            <p>Creamos sitios web rápidos, modernos y optimizados para convertir visitantes en clientes.</p>
+            <a href="#contact" class="btn">Cotiza tu proyecto</a>
         </div>
-            
-        </header>
-        <div class="nav-bg"> 
-            <nav class="navegador-principal contenedor">
-                <a href="#">Inicio</a>
-                <a href="#">Servicios</a>
-                <a href="#">Proyectos</a>
-                <a href="#">Contacto</a>
-            </nav>
+        <div class="hero-image">
+            <img src="/imagen/DEVWEBS.png" alt="Diseño Web">
         </div>
-       
-         
-        <section class="hero">
-            <div class="contenido-hero">
-                <h1 class="titulo">
-                    Luciano Michellon
-                </h1>
-                <h2>Diseño y Desarrollo Web Freelancers</h2>
-                <svg  xmlns="http://www.w3.org/2000/svg"  
-                width="24"  
-                height="24"  
-                viewBox="0 0 24 24"  
-                fill="none"  
-                stroke="currentColor"  
-                stroke-width="2"  
-                stroke-linecap="round"  
-                stroke-linejoin="round"  
-                class="icon icon-tabler icons-tabler-outline icon-tabler-map-pin">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
-                <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
-                </svg>
-            <p>Ciudad Autonoma de Buenos Aires, Argentina</p>
+    </section>
 
-            <a class="boton" href="#formulario">Contactar</a>
-            </div>    
-        </section>
-        
-        <main class="contenedor sombra">
-            <h2>Mis Servicios</h2>
+    <!-- Servicios -->
+    <section id="services" class="services">
+        <h2>Nuestros Servicios</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Diseño Web</h3>
+                <p>Diseños personalizados y adaptables a todos los dispositivos.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Desarrollo a Medida</h3>
+                <p>HTML, CSS, JavaScript, React, WordPress y más.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-search"></i>
+                <h3>SEO</h3>
+                <p>Optimización para motores de búsqueda (Google).</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>E-commerce</h3>
+                <p>Tiendas online con Shopify o WooCommerce.</p>
+            </div>
+        </div>
+    </section>
 
-            <div class="servicios"> 
-                <section class="servicio">
-                    <h3>Diseño Web</h3>
-                    <div class="iconos">
-                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-palette"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25" /><path d="M8.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M12.5 7.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M16.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
-                    </div>
-                    <p>
-                        Ofrezco soluciones de diseño web personalizadas, adaptadas a las necesidades específicas de tu negocio. Creo sitios atractivos, optimizados para dispositivos móviles y fáciles de gestionar, siempre con un enfoque en la experiencia del usuario y el rendimiento.
-                    </p>
-                </section>
+    <!-- Portafolio -->
+    <section id="portfolio" class="portfolio">
+        <h2>Portafolio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/400x300?text=Proyecto+1" alt="Proyecto 1">
+                <div class="portfolio-overlay">
+                    <h3>Tienda Online</h3>
+                    <p>WordPress + WooCommerce</p>
+                    <a href="#" class="btn">Ver Proyecto</a>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/400x300?text=Proyecto+2" alt="Proyecto 2">
+                <div class="portfolio-overlay">
+                    <h3>Landing Page</h3>
+                    <p>HTML, CSS, JavaScript</p>
+                    <a href="#" class="btn">Ver Proyecto</a>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/400x300?text=Proyecto+3" alt="Proyecto 3">
+                <div class="portfolio-overlay">
+                    <h3>Web Corporativa</h3>
+                    <p>React + Tailwind CSS</p>
+                    <a href="#" class="btn">Ver Proyecto</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <section class="servicio">
-                    <h3>Aplicaciones Web</h3>
-                    <div class="iconos">
-                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-code"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" /></svg>
-                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-app-window"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" /><path d="M6 8h.01" /><path d="M9 8h.01" /></svg>
-                    </div>
-                    <p>Creo aplicaciones personalizadas que se ajustan perfectamente a las necesidades de tu negocio. Desde aplicaciones móviles hasta soluciones web, me enfoco en desarrollar herramientas intuitivas, eficientes y escalables que te ayuden a mejorar tus procesos y ofrecer una mejor experiencia a tus usuarios.</p>
-                </section>
+    <!-- Sobre Mí -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>Sobre Mí</h2>
+            <p>Soy un desarrollador web con 5 años de experiencia, especializado en crear soluciones digitales que generan impacto. Mi enfoque es combinar diseño atractivo con funcionalidad impecable.</p>
+            <a href="#contact" class="btn">Contáctame</a>
+        </div>
+        <div class="about-image">
+            <img src="https://via.placeholder.com/400x400?text=Foto+Perfil" alt="Sobre Mí">
+        </div>
+    </section>
 
-                <section class="servicio">
-                    <h3>E-commerce</h3>
-                    <div class="iconos">
-                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
-                    </div>
-                    <p>Desarrollo tiendas online funcionales y personalizadas, con integración de sistemas de pago, control de inventario y optimización del flujo de compra. Cada solución está diseñada para maximizar el rendimiento y facilitar la gestión del negocio.</p>
-                </section> 
-             </div>
+    <!-- Testimonios -->
+    <section class="testimonials">
+        <h2>Testimonios</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p>"Excelente trabajo, cumplió con todas nuestras expectativas."</p>
+                <h4>- María Gómez</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"Profesionalismo y atención al detalle. ¡Lo recomiendo!"</p>
+                <h4>- Juan Pérez</h4>
+            </div>
+        </div>
+    </section>
+<!-- Blog -->
+<section id="blog" class="blog">
+    <h2>Blog</h2>
+    <div class="blog-grid">
+        <article class="blog-card">
+            <img src="https://via.placeholder.com/400x250?text=Blog+1" alt="Blog 1">
+            <div class="blog-content">
+                <h3>Cómo elegir el mejor diseño web para tu negocio</h3>
+                <p>Guía práctica para seleccionar un diseño que convierta visitantes en clientes.</p>
+                <a href="#" class="btn">Leer más</a>
+            </div>
+        </article>
+        <article class="blog-card">
+            <img src="https://via.placeholder.com/400x250?text=Blog+2" alt="Blog 2">
+            <div class="blog-content">
+                <h3>SEO en 2024: Tendencias Clave</h3>
+                <p>Las estrategias que funcionan este año para rankear en Google.</p>
+                <a href="#" class="btn">Leer más</a>
+            </div>
+        </article>
+    </div>
+</section>
+    <!-- Contacto -->
+    <section id="contact" class="contact">
+        <h2>Contacto</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Email" required>
+            <button type="submit" class="btn" id="whatsapp-btn">
+            <textarea placeholder="Tu mensaje" required></textarea>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+        <div class="contact-info">
+            <p><i class="fas fa-envelope"></i> hola@devweb.com</p>
+            <p><i class="fas fa-phone"></i> +123 456 7890</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
 
-             <h2>Mis Proyectos</h2>
-             <div class="servicios"> 
-                <section class="servicio">
-                    <h3>Diseño Web</h3>
-                    <div class="iconos">
-                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-palette"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25" /><path d="M8.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M12.5 7.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M16.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
-                    </div>
-                    <p>
-                        Ofrezco soluciones de diseño web personalizadas, adaptadas a las necesidades específicas de tu negocio. Creo sitios atractivos, optimizados para dispositivos móviles y fáciles de gestionar, siempre con un enfoque en la experiencia del usuario y el rendimiento.
-                    </p>
-                </section>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 DevWeb. Todos los derechos reservados.</p>
+    </footer>
+    <!-- Botón de WhatsApp -->
+    <a href="https://wa.me/5491162661506?text=Hola,%20Quiero%20cotizar%20un%20sitio%20web" class="whatsapp-btn" target="_blank">
+             <i class="fab fa-whatsapp"></i>
+    </a>
 
-                <section class="servicio">
-                    <h3>Aplicaciones Web</h3>
-                    <div class="iconos">
-                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-code"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" /></svg>
-                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-app-window"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" /><path d="M6 8h.01" /><path d="M9 8h.01" /></svg>
-                    </div>
-                    <p>Creo aplicaciones personalizadas que se ajustan perfectamente a las necesidades de tu negocio. Desde aplicaciones móviles hasta soluciones web, me enfoco en desarrollar herramientas intuitivas, eficientes y escalables que te ayuden a mejorar tus procesos y ofrecer una mejor experiencia a tus usuarios.</p>
-                </section>
-
-                <section class="servicio">
-                    <h3>E-commerce</h3>
-                    <div class="iconos">
-                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
-                    </div>
-                    <p>Desarrollo tiendas online funcionales y personalizadas, con integración de sistemas de pago, control de inventario y optimización del flujo de compra. Cada solución está diseñada para maximizar el rendimiento y facilitar la gestión del negocio.</p>
-                </section> 
-             </div>
-
-        <section>
-            <h2>Contacto</h2>
-            <form action="" class="formulario" id="formulario">
-                <fieldset>
-                    <legend>Contactame llenando todos los campos</legend>
-                    <div class="contenedor-campos">
-                        <div class="campo">
-                            <label for="">Nombre</label>
-                            <input class="input-text" type="text" placeholder="Tu Nombre">
-                        </div>
-                    
-                        <div class="campo">
-                            <label for="">Telefono</label>
-                            <input class="input-text" type="tel" placeholder="Tu Telefono">
-                        </div>
-                        <div class="campo">
-                            <label for="">Correo electronico</label>
-                            <input class="input-text" type="email" placeholder="Tu email">
-                        </div>
-                        <div class="campo">
-                            <label for="">Mensaje</label>
-                            <textarea class="input-text" name="" id=""></textarea>
-                        </div>
-                    </div>
-                   
-                    <div class="alinear-derecha flex">
-                        <input class="boton w-sm-100" type="submit" value="Enviar">
-                    </div>
-                </fieldset>
-            </form>
-        </section>
-    </main>
-        <footer class="footer"> 
-            <h3>© Todos los derechos reservados.</h3>
-            <img src="/imagen/LMDEVS (1).png" alt="" class="footer-imagen">
-        </footer>
-       
-    </body>
+    <!-- Scripts -->
+    <script src="/js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+           duration: 1000,
+           once: true
+        });
+    </script>
+   
+</body>
 </html>
