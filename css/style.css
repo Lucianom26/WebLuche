@@ -5,6 +5,7 @@
     --light: #f8fafc;
     --gray: #94a3b8;
     --logo: #5271ff;
+    --violeta:#520cdd;
 }
 
 /* Reset y estilos generales */
@@ -38,7 +39,7 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     text-decoration: none;
-    color: var(--dark);
+    color: var(--violeta);
 }
 
 .logo span {
@@ -60,6 +61,8 @@ body {
 
 .nav-links a:hover {
     color: var(--primary);
+    font-weight: bold;
+    text-decoration: underline 1px var(--logo);
 }
 
 .burger {
@@ -86,6 +89,7 @@ body {
     font-size: 3rem;
     margin-bottom: 1rem;
     color: var(--dark);
+     font-family: 'Inter', sans-serif;
 }
 
 .hero-content p {
@@ -467,6 +471,7 @@ footer {
     box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
     z-index: 999;
     transition: transform 0.3s;
+    text-decoration: none;
 }
 
 .whatsapp-btn:hover {
