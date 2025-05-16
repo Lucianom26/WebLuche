@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevWeb | Diseño y Desarrollo Web Profesional</title>
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -20,7 +20,7 @@
                 <li><a href="#home">Inicio</a></li>
                 <li><a href="#services">Servicios</a></li>
                 <li><a href="#portfolio">Portafolio</a></li>
-                <li><a href="#about">Sobre Mí</a></li>
+                <li><a href="#about">El Equipo</a></li>
                 <li><a href="#contact">Contacto</a></li>
             </ul>
             <div class="burger">
@@ -69,40 +69,57 @@
     </section>
 
     <!-- Portafolio -->
-    <section id="portfolio" class="portfolio">
-        <h2>Portafolio</h2>
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <img src="https://via.placeholder.com/400x300?text=Proyecto+1" alt="Proyecto 1">
-                <div class="portfolio-overlay">
-                    <h3>Tienda Online</h3>
-                    <p>WordPress + WooCommerce</p>
-                    <a href="#" class="btn">Ver Proyecto</a>
+<section id="portfolio" class="portfolio">
+    <h2>Portafolio</h2>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- Proyecto 1 -->
+            <div class="swiper-slide">
+                <div class="portfolio-item">
+                    <img src="imagen/playstoredeco.png" alt="Proyecto 1 - playstoredeco">
+                    <div class="portfolio-overlay">
+                        <h3>Landing Page</h3>
+                        <p>HTML5, CSS3, JS</p>
+                        <a href="#" class="btn">Ver Proyecto</a>
+                        <a href="https://www.playstoredeco.com" target="_blank" class="btn">Visitar Sitio</a>
+                    </div>
                 </div>
             </div>
-            <div class="portfolio-item">
-                <img src="https://via.placeholder.com/400x300?text=Proyecto+2" alt="Proyecto 2">
-                <div class="portfolio-overlay">
-                    <h3>Landing Page</h3>
-                    <p>HTML, CSS, JavaScript</p>
-                    <a href="#" class="btn">Ver Proyecto</a>
+            <!-- Proyecto 2 -->
+            <div class="swiper-slide">
+                <div class="portfolio-item">
+                    <img src="imagen/trilogia.jpg" alt="Proyecto 2 - trilogia">
+                    <div class="portfolio-overlay">
+                        <h3>Web Studio de Diseño</h3>
+                        <p>HTML, CSS, JavaScript</p>
+                        <a href="#" class="btn">Ver Proyecto</a>
+                        <a href="https://trilogia.ar" target="_blank" class="btn">Visitar Sitio</a>
+                    </div>
                 </div>
             </div>
-            <div class="portfolio-item">
-                <img src="https://via.placeholder.com/400x300?text=Proyecto+3" alt="Proyecto 3">
-                <div class="portfolio-overlay">
-                    <h3>Web Corporativa</h3>
-                    <p>React + Tailwind CSS</p>
-                    <a href="#" class="btn">Ver Proyecto</a>
+            <!-- Proyecto 3 -->
+            <div class="swiper-slide">
+                <div class="portfolio-item">
+                    <img src="imagen/espacioPaCha.png" alt="Proyecto 3 - espacioPaCha">
+                    <div class="portfolio-overlay">
+                        <h3>Web Corporativa</h3>
+                        <p>React + Tailwind CSS</p>
+                        <a href="#" class="btn">Ver Proyecto</a>
+                          <a href="https://espaciopacha.netlify.app/" target="_blank" class="btn">Visitar Sitio</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+        <div class="swiper-button-next"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="swiper-button-prev"><i class="fa-solid fa-arrow-left"></i></div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
 
     <!-- Sobre Mí -->
     <section id="about" class="about">
         <div class="about-content">
-            <h2>Sobre Mí</h2>
+            <h2>El Equipo</h2>
             <p>Soy un desarrollador web con 5 años de experiencia, especializado en crear soluciones digitales que generan impacto. Mi enfoque es combinar diseño atractivo con funcionalidad impecable.</p>
             <a href="#contact" class="btn">Contáctame</a>
         </div>
@@ -150,13 +167,21 @@
     <!-- Contacto -->
     <section id="contact" class="contact">
         <h2>Contacto</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Nombre" required>
-            <input type="email" placeholder="Email" required>
-            <button type="submit" class="btn" id="whatsapp-btn">
-            <textarea placeholder="Tu mensaje" required></textarea>
-            <button type="submit" class="btn">Enviar</button>
-        </form>
+        <form class="contact-form" action="https://formsubmit.co/lucianomichellon@gmail.com" method="POST">
+    <!-- Campos del formulario -->
+    <input type="text" name="Nombre" placeholder="Nombre" required>
+    <input type="email" name="Email" placeholder="Email" required>
+    <textarea name="Mensaje" placeholder="Tu mensaje" required></textarea>
+    
+    <!-- Redirección después del envío (opcional) -->
+    <input type="hidden" name="_next" value="https://devw.netlify.app/gracias.html">
+    
+    <!-- Evita spam (opcional) -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="text" name="_honey" style="display:none">
+    
+    <button type="submit" class="btn">Enviar Mensaje</button>
+</form>
         <div class="contact-info">
             <p><i class="fas fa-envelope"></i> hola@devweb.com</p>
             <p><i class="fas fa-phone"></i> +123 456 7890</p>
@@ -178,7 +203,8 @@
     </a>
 
     <!-- Scripts -->
-    <script src="/js/script.js"></script>
+    <script src="js/script.js"></script>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
