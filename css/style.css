@@ -6,7 +6,9 @@
     --gray: #94a3b8;
     --gray_opacity: rgba(194, 194, 194, 0.95);
     --logo: #5271ff;
-    --violeta:#520cdd;
+    --violeta:rgb(82, 12, 221);
+    --fondo: linear-gradient(100deg, #1e293b, #2563eb);
+    --fondo_opacity: rgba(38, 38, 38, 0.8); 
 }
 
 /* Reset y estilos generales */
@@ -18,7 +20,8 @@
 }
 
 body {
-    background-color: var(--light);
+    min-height: 100vh;
+    background: var(--fondo);
     color: var(--dark);
     line-height: 1.6;
 }
@@ -89,8 +92,8 @@ body {
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: var(--dark);
-     font-family: 'Inter', sans-serif;
+    color: var(--light);
+    font-family: 'Inter', sans-serif;
 }
 
 .hero-content p {
@@ -123,7 +126,7 @@ body {
     width: 80%;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
+    background-color: var(--light);}
 
 /* Servicios */
 .services {
@@ -136,7 +139,7 @@ body {
 .services h2 {
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: var(--dark);
+    color: var(--light);
 }
 
 .services-grid {
@@ -179,7 +182,7 @@ body {
 .portfolio h2 {
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: var(--dark);
+    color: var(--light);
 }
 
 .portfolio-grid {
@@ -216,7 +219,7 @@ body {
     transition: opacity 0.5s;
     padding: 1rem;
     text-align: center;
-    color: white;
+    color: var(--dark);
 }
 
 .portfolio-item:hover .portfolio-overlay {
@@ -240,7 +243,7 @@ body {
 .about {
     display: flex;
     align-items: center;
-    padding: 5rem 2rem;
+    padding: 5rem 5rem;
     max-width: 1200px;
     margin: 0 auto;
     gap: 3rem;
@@ -253,11 +256,11 @@ body {
 .about-content h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-    color: var(--dark);
+    color: var(--light);
 }
 
 .about-content p {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     color: var(--gray);
 }
 
@@ -282,7 +285,7 @@ body {
 .testimonials h2 {
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: var(--dark);
+    color: var(--light);
 }
 
 .testimonials-grid {
@@ -306,7 +309,58 @@ body {
 .testimonial-card h4 {
     color: var(--primary);
 }
+/* Blog */
+.blog {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
 
+.blog h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--light);
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.blog-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.blog-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.blog-content p {
+    color: var(--gray);
+    margin-bottom: 1rem;
+}
 /* Contacto */
 .contact {
     padding: 5rem 2rem;
@@ -318,7 +372,7 @@ body {
 .contact h2 {
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: var(--dark);
+    color: var(--light);
 }
 
 .contact-form {
@@ -344,6 +398,7 @@ body {
 
 .contact-info {
     margin-top: 2rem;
+    color: var(--light);
 }
 
 .contact-info p {
@@ -362,13 +417,13 @@ body {
 }
 
 .social-links a {
-    color: var(--dark);
+    color: var(--light);
     font-size: 1.5rem;
     transition: color 0.3s;
 }
 
 .social-links a:hover {
-    color: var(--primary);
+    color: var(--gray_opacity);
 }
 
 /* Footer */
@@ -414,58 +469,7 @@ footer {
         flex-direction: column;
     }
 }
-/* Blog */
-.blog {
-    padding: 5rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-}
 
-.blog h2 {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: var(--dark);
-}
-
-.blog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.blog-card {
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s;
-}
-
-.blog-card:hover {
-    transform: translateY(-10px);
-}
-
-.blog-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.blog-content {
-    padding: 1.5rem;
-    text-align: left;
-}
-
-.blog-content h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-}
-
-.blog-content p {
-    color: var(--gray);
-    margin-bottom: 1rem;
-}
 /* Botón de WhatsApp */
 .whatsapp-btn {
     position: fixed;
@@ -585,8 +589,8 @@ footer {
 .portfolio-item {
     position: relative;
     width: 100%;
-    max-width: 1000px;
-    border-radius: 10px;
+    max-width: 1500px;
+    height: 400px; /* Altura fija para uniformidad */
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
