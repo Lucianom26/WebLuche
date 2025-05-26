@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevWeb | Diseño y Desarrollo Web Profesional</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">dev<span>web</span></a>
+        </div>
+        
+        <!-- Botón Hamburguesa -->
+        <div class="burger">
+            <i class="fas fa-bars"></i>
+        </div>
+        
+        <!-- Menú Links -->
+        <ul class="nav-links">
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#portfolio">Portafolio</a></li>
+            <li><a href="#about">El Equipo</a></li>
+            <li><a href="#Precios">Precios</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Planes</h1>
+            <p>Contamos con planes accesibles para que puedas lucir como un verdadero profesional.</p>
+            <a href="#contact" class="btn">Cotiza tu proyecto</a>
+        </div>
+        <div class="hero-image">
+            <img src="/imagen/DEVWEBS.png" alt="Diseño Web">
+        </div>
+    </section>
+    <!--Precios-->
+
+    <section id="Precios" class="precios">
+        <h2>Precios</h2>
+        <div class="pricing-table">
+            <div class="pricing-card">
+                <h3>Plan Landing Page</h3>
+                <p>¡Mostrá lo mejor de tu negocio con una página impactante y profesional! Este plan es ideal para captar clientes desde el primer clic. Diseñamos una landing clara, atractiva y lista para convertir visitas en oportunidades.</p>
+                <p class="price">$ 95.000,00</p>
+                <ul class="pricing-list">
+                    <li>1 Página Web creada con HTML, CSS y JAVASCRIPT</li>
+                    <li>10 fotos/imagenes precargadas</li>
+                    <li>Optimización para todo tipo de dispositivo</li>
+                    <li>1 formulario de contacto</li>
+                    <li>Links a redes sociales</li>
+                    <li>Botón de Whatsapp</li>
+                    <li>Hosting por 1 Año</li>
+                    <li>Dominio por 1 Año</li>
+                    <li>Certificado SSL (Página Segura)</li>
+                </ul>
+                <a href="#contact" class="btn">Contratar</a>
+            </div>
+            <div class="pricing-card">
+                <h3>Plan Web Corporativa</h3>
+                <p class="price">$ 190.000</p>
+                <ul class="pricing-list">
+                    <li>5 Páginas Web</li>
+                    <li>Diseño Personalizado</li>
+                    
+                    
+                    <li>10 fotos/imagenes precargadas</li>
+                    <li>Optimización para todo tipo de dispositivo</li>
+                    <li>1 formulario de contacto</li>
+                    <li>Links a redes sociales</li>
+                    <li>Botón de Whatsapp</li>
+                    <li>Hosting por 1 Año</li>
+                    <li>Dominio por 1 Año</li>
+                    <li>Certificado SSL (Página Segura)</li>
+                </ul>
+                <a href="#contact" class="btn">Contratar</a>
+            </div>
+            <div class="pricing-card">
+                <h3>Plan Tienda Online</h3>
+                <p class="price">$ 300.000</p>
+                <ul class="pricing-list">
+                    <li>Páginas Ilimitadas</li>
+                    <li>Diseño Personalizado Avanzado</li>
+                    <li>Hosting por 1 Año</li>
+                    <li>Soporte Técnico Prioritario 24/7</li>
+                </ul>
+                <a href="#contact" class="btn">Contratar</a>
+            </div>
+        </div>
+    </section>
+
+      <!-- Contacto -->
+    <section id="contact" class="contact">
+        <h2>Contacto</h2>
+     <form class="contact-form" action="https://formsubmit.co/lucianomichellon@gmail.com" method="POST">
+    <!-- Campos del formulario -->
+    <input type="text" name="Nombre" placeholder="Nombre" required>
+    <input type="email" name="Email" placeholder="Email" required>
+    <select class="contact-form" name="seleccion-servicios" id="" required>
+        <option value="">Selecciona un servicio</option>
+        <option value="Diseño Web">Diseño Web</option>
+        <option value="Desarrollo a Medida">Desarrollo a Medida</option>
+        <option value="E-Commerce">E-Commerce</option>
+    </select>
+    <textarea name="Mensaje" placeholder="Tu mensaje" required></textarea>
+    
+    <!-- Redirección después del envío (opcional) -->
+    <input type="hidden" name="_next" value="https://devw.netlify.app/gracias.html">
+    
+    <!-- Evita spam (opcional) -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="text" name="_honey" style="display:none">
+    <button type="submit" class="btn">Enviar Mensaje</button>
+</form>
+        <div class="contact-info">
+            <p><i class="fas fa-envelope"></i> devweb.diseno@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +5411 6266 1506</p>
+            <p><i class="fa-solid fa-location-dot"></i>Ciudad Autonoma de Buenos Aires - Argentina</p>
+            <div class="social-links">
+                 <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>  
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="logo">   
+        <p>&copy; 2025 dev<span>web</span>. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <!-- Botón de WhatsApp -->
+    <a href="https://wa.me/5491162661506?text=Hola,%20Quiero%20cotizar%20un%20sitio%20web" class="whatsapp-btn" target="_blank">
+             <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+           duration: 1000,
+           once: true
+        });
+    </script>
+   
+</body>
+</html>

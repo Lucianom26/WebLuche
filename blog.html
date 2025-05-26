@@ -121,17 +121,37 @@
     </div>
 </section>
 
-  <section id="contact" class="contact">
+   <!-- Contacto -->
+    <section id="contact" class="contact">
         <h2>Contacto</h2>
-        <p>Si deseas más información sobre nuestros servicios
+     <form class="contact-form" action="https://formsubmit.co/lucianomichellon@gmail.com" method="POST">
+    <!-- Campos del formulario -->
+    <input type="text" name="Nombre" placeholder="Nombre" required>
+    <input type="email" name="Email" placeholder="Email" required>
+    <select class="contact-form" name="seleccion-servicios" id="" required>
+        <option value="">Selecciona un servicio</option>
+        <option value="Diseño Web">Diseño Web</option>
+        <option value="Desarrollo a Medida">Desarrollo a Medida</option>
+        <option value="E-Commerce">E-Commerce</option>
+    </select>
+    <textarea name="Mensaje" placeholder="Tu mensaje" required></textarea>
+    
+    <!-- Redirección después del envío (opcional) -->
+    <input type="hidden" name="_next" value="https://devw.netlify.app/gracias.html">
+    
+    <!-- Evita spam (opcional) -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="text" name="_honey" style="display:none">
+    <button type="submit" class="btn">Enviar Mensaje</button>
+</form>
         <div class="contact-info">
-            <p><i class="fas fa-envelope"></i> contacto@devweb.com</p>
+            <p><i class="fas fa-envelope"></i>devweb.diseno@gmail.com</p>
             <p><i class="fas fa-phone"></i> +5411 6266 1506</p>
             <p><i class="fa-solid fa-location-dot"></i>Ciudad Autonoma de Buenos Aires - Argentina</p>
             <div class="social-links">
                  <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>  
+                <a href="#"><i class="fab fa-facebook"></i></a>  
             </div>
         </div>
     </section>

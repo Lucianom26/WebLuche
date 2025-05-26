@@ -361,7 +361,53 @@ body {
     color: var(--dark);
     margin-bottom: 1rem;
 }
-/* Contacto */
+/*precios*/
+.precios {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+.precios h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--light);
+}
+.pricing-table {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.pricing-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+.pricing-card:hover {
+    transform: translateY(-10px);
+}
+.pricing-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.pricing-card p {
+    margin-bottom: 1rem;
+    color: var(--gray);
+}
+.pricing-card .price {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+.pricing-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+/*Contacto */
 .contact {
     padding: 5rem 2rem;
     max-width: 1200px;
@@ -383,7 +429,8 @@ body {
 }
 
 .contact-form input,
-.contact-form textarea {
+.contact-form textarea,
+.contact-form select {
     width: 100%;
     padding: 1rem;
     border: 1px solid var(--gray);
