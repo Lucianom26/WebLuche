@@ -9,6 +9,7 @@
     --violeta:rgb(82, 12, 221);
     --fondo: linear-gradient(100deg, #1e293b, #2563eb);
     --fondo_opacity: rgba(38, 38, 38, 0.8); 
+    --naranja: linear-gradient(100deg, #ffcb6b, #ff5722);
 }
 
 /* Reset y estilos generales */
@@ -373,13 +374,14 @@ body {
     margin-bottom: 3rem;
     color: var(--light);
 }
+
 .pricing-table {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 .pricing-card {
-    background-color: white;
+    background-color: var(--light);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -389,22 +391,27 @@ body {
     transform: translateY(-10px);
 }
 .pricing-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     margin-bottom: 1rem;
+    border-bottom: var(--dark) 2px solid;
 }
 .pricing-card p {
     margin-bottom: 1rem;
-    color: var(--gray);
+    color: var(--dark);
+    
 }
 .pricing-card .price {
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: var(--primary);
+    font-weight: bold;
     margin-bottom: 1rem;
+    border-bottom: var(--dark) 2px solid;
 }
 .pricing-list {
     list-style: none;
     padding: 0;
     margin-bottom: 1rem;
+    border-bottom: var(--dark) 2px solid;
 }
 
 /*Contacto */
