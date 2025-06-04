@@ -3,13 +3,20 @@
     --primary: #2563eb;
     --dark: #1e293b;
     --light: #f8fafc;
+    --light-opacity: rgba(248, 250, 252, 0.95);
     --gray: #94a3b8;
-    --gray_opacity: rgba(194, 194, 194, 0.95);
+    --gray_opacity: rgba(245, 245, 245, 0.568);
     --logo: #5271ff;
-    --violeta:rgb(82, 12, 221);
+    --violeta: rgb(82, 12, 221);
     --fondo: linear-gradient(100deg, #1e293b, #2563eb);
-    --fondo_opacity: rgba(38, 38, 38, 0.8); 
-    --naranja: linear-gradient(100deg, #ffcb6b, #ff5722);
+    --fondo_opacity: rgba(38, 38, 38, 0.8);
+    --instagram: linear-gradient(100deg,
+            #405DE6, #5B51D8, #833AB4, #C13584,
+            #E1306C, #FD1D1D, #F56040,
+            #FCAF45, #FFDC80);
+    --facebook: linear-gradient(100deg, #3b5998, #8b9dc3);
+    --linkdin: linear-gradient(100deg, #0077b5, #00a0dc);
+    --whatsapp: linear-gradient(100deg, #25D366, #128C7E);
 }
 
 /* Reset y estilos generales */
@@ -33,14 +40,17 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: .5rem 1rem;
-    background-color: var(--light);
+    background-color: var(--light-opacity);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+
 .logo img {
-    width: 100px; /* Ajusta el tamaño del logo */
+    width: 100px;
+    /* Ajusta el tamaño del logo */
     aspect-ratio: 1/1;
     object-fit: contain;
-    height: auto; /* Mantiene la proporción del logo */
+    /* Mantiene la proporción del logo */
+    height: 50px;
 }
 
 .nav-links {
@@ -122,7 +132,8 @@ body {
     width: 80%;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    background-color: var(--light);}
+    background-color: var(--light);
+}
 
 /* Servicios */
 .services {
@@ -305,6 +316,7 @@ body {
 .testimonial-card h4 {
     color: var(--primary);
 }
+
 /* Blog */
 .blog {
     padding: 5rem 2rem;
@@ -321,8 +333,14 @@ body {
 
 .blog-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
     gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .blog-card {
@@ -339,7 +357,7 @@ body {
 
 .blog-card img {
     width: 100%;
-    height: 400px;
+    height: 300px;
     object-fit: cover;
 }
 
@@ -357,6 +375,7 @@ body {
     color: var(--dark);
     margin-bottom: 1rem;
 }
+
 /*precios*/
 .precios {
     padding: 5rem 2rem;
@@ -364,6 +383,7 @@ body {
     margin: 0 auto;
     text-align: center;
 }
+
 .precios h2 {
     font-size: 2.5rem;
     margin-bottom: 3rem;
@@ -375,6 +395,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
+
 .pricing-card {
     background-color: var(--light);
     padding: 2rem;
@@ -382,19 +403,31 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s;
 }
+
 .pricing-card:hover {
     transform: translateY(-10px);
 }
+
 .pricing-card h3 {
     font-size: 1.7rem;
     margin-bottom: 1rem;
     border-bottom: var(--dark) 2px solid;
 }
+
+.pricing-card svg {
+    width: 27px;
+    height: 27px;
+    background: var(--instagram);
+    border-radius: 28%;
+    color: var(--light);
+    border: var(--light) 2px solid;
+}
+
 .pricing-card p {
     margin-bottom: 1rem;
     color: var(--dark);
-    
 }
+
 .pricing-card .price {
     font-size: 1.7rem;
     color: var(--primary);
@@ -402,6 +435,7 @@ body {
     margin-bottom: 1rem;
     border-bottom: var(--dark) 2px solid;
 }
+
 .pricing-list {
     list-style: none;
     padding: 0;
@@ -441,12 +475,12 @@ body {
 }
 
 .contact-form textarea {
-    height: 150px;
+    height: 200px;
     resize: vertical;
 }
 
 .contact-info {
-    margin-top: 2rem;
+    margin-top: 1rem;
     color: var(--light);
 }
 
@@ -465,22 +499,125 @@ body {
     margin-top: 1rem;
 }
 
-.social-links a {
+.social-links a .fa-instagram,
+.social-links a .fa-facebook,
+.social-links a .fa-linkedin {
+    background: var();
     color: var(--light);
-    font-size: 1.5rem;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
     transition: color 0.3s;
 }
 
-.social-links a:hover {
-    color: var(--gray_opacity);
+.social-links a .fa-instagram:hover {
+    background: var(--instagram);
+    color: var(--light);
+    transform: scale(1.2);
+}
+
+.social-links a .fa-facebook:hover {
+    background: var(--facebook);
+    color: var(--light);
+    transform: scale(1.2);
+}
+
+.social-links a .fa-linkedin:hover {
+    background: var(--linkdin);
+    color: var(--light);
+    transform: scale(1.2);
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: var(--dark);
+    background-color: none;
     color: white;
+    padding: 2rem 1rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-column.center {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.footer-column.center p {
+    margin-top: 2rem;
+    color: var(--light);
+}
+
+.footer-column.center img {
+    width: 150px;
+    height: 70px;
+    object-fit: contain;
+    background-color: var(--light);
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+
+.footer-column.right {
+    text-align: center;
+}
+
+.footer-column.right a img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.footer-links a {
+    color: var(--light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+}
+
+.afip-qr img {
+    max-width: 70px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Responsive: columnas apiladas en pantallas pequeñas */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-column.right {
+        text-align: center;
+    }
 }
 
 /* Responsive */
@@ -490,17 +627,20 @@ footer {
         flex-direction: column;
         position: absolute;
         background-color: var(--gray_opacity);
-        top: 70px; /* ajusta según tu header */
+        top: 70px;
+        /* ajusta según tu header */
         right: 0;
         width: 100%;
         padding: 1rem;
     }
-      .nav-links.active {
+
+    .nav-links.active {
         display: flex;
     }
 
     .burger {
         display: block;
+        color: var(--logo);
     }
 
     .hero {
@@ -543,6 +683,7 @@ footer {
     transform: scale(1.1);
     color: white;
 }
+
 /* Estilos para la página de gracias */
 .thank-you {
     text-align: center;
@@ -555,22 +696,26 @@ footer {
 }
 
 .logo-empresa {
-    width: 150px; /* Ajusta el tamaño */
+    width: 150px;
+    /* Ajusta el tamaño */
     margin-bottom: 2rem;
-    border-radius: 10px; /* Opcional: para esquinas redondeadas */
-     background-color: var(--light);
+    border-radius: 10px;
+    /* Opcional: para esquinas redondeadas */
+    background-color: var(--light);
 }
 
 .thank-you h1 {
     font-size: 2.2rem;
     margin-bottom: 1rem;
-    color: var(--light); /* Usa el color primario de tu paleta */
+    color: var(--light);
+    /* Usa el color primario de tu paleta */
 }
 
 .thank-you p {
     font-size: 1.1rem;
     margin-bottom: 2rem;
-    color: var(--gray); /* Color secundario para el texto */
+    color: var(--gray);
+    /* Color secundario para el texto */
 }
 
 /* Estilos mínimos de Swiper */
@@ -580,6 +725,7 @@ footer {
     position: relative;
     overflow: hidden;
 }
+
 .swiper-slide {
     text-align: center;
     display: flex;
@@ -587,7 +733,8 @@ footer {
     align-items: center;
     transition: transform 0.5s ease;
 }
-.swiper-button-next, 
+
+.swiper-button-next,
 .swiper-button-prev {
     color: var(--gray);
     position: absolute;
@@ -597,11 +744,13 @@ footer {
     cursor: pointer;
     font-size: 24px;
 }
-.swiper-button-next:hover{
+
+.swiper-button-next:hover {
     color: var(--dark);
-} 
+}
+
 .swiper-button-prev:hover {
-   color: var(--dark);
+    color: var(--dark);
 }
 
 
@@ -612,6 +761,7 @@ footer {
 .swiper-button-prev {
     left: 10px;
 }
+
 .swiper-pagination {
     position: absolute;
     bottom: 10px;
@@ -631,7 +781,7 @@ footer {
 }
 
 .swiper-pagination-bullet.active {
-     background: var(--logo);
+    background: var(--logo);
 }
 
 /* Carrusel Swiper */
@@ -640,7 +790,8 @@ footer {
     position: relative;
     width: 100%;
     max-width: 1500px;
-    height: 400px; /* Altura fija para uniformidad */
+    height: 400px;
+    /* Altura fija para uniformidad */
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
@@ -650,10 +801,14 @@ footer {
 /* Ajustes para las imágenes del portafolio */
 .portfolio-item img {
     width: 100%;
-    height: 400px; /* Altura fija para uniformidad */
-    object-fit: contain; /* Mantiene relación de aspecto sin recortar */
-    background-color: #fff; /* Fondo neutro para logos transparentes */
-    padding: 1rem; /* Espacio alrededor del logo */
+    height: 400px;
+    /* Altura fija para uniformidad */
+    object-fit: contain;
+    /* Mantiene relación de aspecto sin recortar */
+    background-color: #fff;
+    /* Fondo neutro para logos transparentes */
+    padding: 1rem;
+    /* Espacio alrededor del logo */
 }
 
 /* Efecto hover más suave */
@@ -665,8 +820,10 @@ footer {
 /* Estilos para múltiples botones en el overlay */
 .portfolio-overlay {
     display: flex;
-    flex-direction: column;  /* Apila los botones verticalmente */
-    gap: 10px;               /* Espacio entre botones */
+    flex-direction: column;
+    /* Apila los botones verticalmente */
+    gap: 10px;
+    /* Espacio entre botones */
     align-items: center;
     justify-content: center;
 }
